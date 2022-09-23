@@ -19,6 +19,9 @@
 					<div class="card">
                         <div class="card-header bg-dark text-white text-center">
 						    <span>Enrolled Students</span>
+                            <span class="float-right">
+                                <a href="addStudents.php" class="btn btn-secondary btn-sm">add student</a>
+                            </span>
 					    </div>
                         <div class="card-body">
                             <table class="table table-striped table-hover table-responsive">
