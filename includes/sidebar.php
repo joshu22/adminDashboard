@@ -2,7 +2,7 @@
 		<nav>
 			<ul>
             <li>
-					<a href="students.php">
+					<a href="index.php">
 						<span> <i class="fa fa-tachometer"></i></span>
 						<span>Dashboard</span>
 					</a>
