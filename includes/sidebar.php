@@ -25,6 +25,12 @@
 						<span>Campus</span>
 					</a>
 				</li>
+				<li>
+					<a href="subscribers.php">
+						<span> <i class="fa fa-group"></i></span>
+						<span>Subscribers</span>
+					</a>
+				</li>
 			</ul>
 		</nav>
 
