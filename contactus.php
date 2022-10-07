@@ -13,7 +13,7 @@
     // fetch all user records
     // 1. database connection
     require_once('dbconnection.php');
-    $fetchEnrolledStudents=mysqli_query($conn,"SELECT * FROM enrollments");
+    $fetchMessages=mysqli_query($conn,"SELECT * FROM messages");
 	?>
 
 
@@ -23,9 +23,9 @@
 				<div class="col-lg-12">
 					<div class="card">
                         <div class="card-header bg-dark text-white text-center">
-						    <span>Enrolled Students</span>
+						    <span>Messages</span>
                             <span class="float-right">
-                                <a href="addStudents.php" class="btn btn-secondary btn-sm">add students</a>
+                                <a href="addMessage.php" class="btn btn-secondary btn-sm">add message</a>
                             </span>
 					    </div>
                         <div class="card-body">
@@ -34,32 +34,32 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Name</th>
-                                    <th>Reg Number</th>
-                                    <th>Phone</th>
                                     <th>Email</th>
-                                    <th>Course</th>
-                                    <th>Enrolled On</th>
+                                    <th>Phone</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                    <th>Created At</th>
                                     <th>Action</th>
                                 </tr>
                                </thead>
                                <tbody>
-                                <?php while( $row= mysqli_fetch_array($fetchEnrolledStudents)) { ?>
+                                <?php while( $row= mysqli_fetch_array($fetchMessages)) { ?>
                                     <tr>
                                         <td><?php echo $row['id']?></td>
                                         <td><?php echo $row['name']?></td>
-                                        <td><?php echo $row['reg_number']?></td>
-                                        <td><?php echo $row['phone']?></td>
                                         <td><?php echo $row['email']?></td>
-                                        <td><?php echo $row['course']?></td>
+                                        <td><?php echo $row['phone']?></td>
+                                        <td><?php echo $row['subject']?></td>
+                                        <td><?php echo $row['message']?></td>
                                         <td><?php echo $row['created_at']?></td>
                                         <td>
-                                            <a href="editStudent.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-sm">
+                                            <a href="editMessage.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-sm">
                                             <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="viewStudents.php?id=<?php echo $row['id']?>" class="btn btn-success btn-sm">
+                                            <a href="viewMessage.php?id=<?php echo $row['id']?>" class="btn btn-success btn-sm">
                                            <i class="fa fa-eye"></i>
                                             </a>
-                                            <a href="deleteStudent.php?id=<?php echo $row['id']?>" class="btn btn-danger btn-sm">
+                                            <a href="deleteMessage.php?id=<?php echo $row['id']?>" class="btn btn-danger btn-sm">
                                             <i class="fa fa-trash"></i>
                                             </a>
                                         </td>
